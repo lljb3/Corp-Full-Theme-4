@@ -131,7 +131,7 @@
                             <div class="has-text">
                                 <div class="category text-accent">
                                     <span class="float-left"><?php the_category(', '); ?> -</span>
-                                    <span class="float-left">&nbsp;<?php wp_days_ago_v3(); ?> -</span>
+                                    <span class="float-left">&nbsp;<?php the_time(); ?> -</span>
                                     <span class="float-left">&nbsp;<?php comments_popup_link('0 Comments', '1 Comment', '% Comments'); ?></span>
                                 <!-- end .category --></div>
                                 <div class="post">

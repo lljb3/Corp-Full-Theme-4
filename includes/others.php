@@ -195,3 +195,17 @@
 			printf( '<li>%s</li>' . "\n", get_next_posts_link() );
 		echo '</ul></div>' . "\n";
 	}
+
+	/* Add Time Filter */
+	function dynamictime() {
+		global $post;
+		$date = $post->post_date;
+		$time = get_post_time('G', true, $post);
+		$mytime = time() - $time;
+		if($mytime > 0 && $mytime < 7*24*60*60)
+		  $mytimestamp = sprintf(__('%s ago'), human_time_diff($time));
+		else
+		  $mytimestamp = date(get_option('date_format'), strtotime($date));
+		return $mytimestamp;
+	}
+	add_filter('the_time', 'dynamictime');
