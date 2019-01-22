@@ -50,6 +50,13 @@ module.exports = {
                 })
             },
             {
+                test: /\.scss$/i,
+                exclude: /node_modules/,
+                use: ExtractTextPlugin.extract( {
+                    use: [ 'css-loader', 'sass-loader' ]
+                } )
+            },
+            {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [{
                     loader: 'file-loader',
