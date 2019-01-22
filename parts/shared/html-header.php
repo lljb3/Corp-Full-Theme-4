@@ -53,5 +53,4 @@
 <div id="app">
 
 <!-- Start Barba -->
-<div id="barba-wrapper">
-<div class="barba-container" data-namespace="barba-container">
+<div id="swup" class="transition-fade">

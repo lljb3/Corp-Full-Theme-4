@@ -11,7 +11,6 @@
 
 <!-- End Barba -->
 </div>
-</div>
 
 <!-- End App -->
 </div>
