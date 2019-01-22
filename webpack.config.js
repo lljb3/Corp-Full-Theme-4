@@ -7,7 +7,7 @@ module.exports = {
     mode: 'development',
     resolve: {
         alias: {
-            barba: path.resolve('node_modules', 'barba.js/dist/barba.min.js'),
+            swup: path.resolve(__dirname, 'assets/js/lib/swup.js'),
             smoothscroll: path.resolve(__dirname, 'assets/js/lib/smooth-scroll.polyfills.js')
         }
     },

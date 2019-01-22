@@ -1,5 +1,5 @@
 // Import JS
-import '../lib/barba';
+import '../lib/swup';
 import '../lib/bootstrap.bundle';
 import '../lib/bootstrap.jasny';
 import '../lib/modernizr';

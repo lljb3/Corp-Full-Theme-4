@@ -12,11 +12,11 @@
 			$app_base = get_template_directory_uri() . '/assets/js';
 
 			/* React JS */
-			//wp_enqueue_script( 'reactjs', 'https://unpkg.com/react@16/umd/react.production.min.js', array('jquery'), null, true );
-			//wp_enqueue_script( 'reactdomjs', 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js', array('jquery'), null, true );
+			wp_enqueue_script( 'reactjs', 'https://unpkg.com/react@16/umd/react.production.min.js', array('jquery'), null, true );
+			wp_enqueue_script( 'reactdomjs', 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js', array('jquery'), null, true );
 
 			/* React Component JS */
-			//wp_enqueue_script( 'reactcomjs', $app_base . '/app.js', array('jquery'), null, true );
+			wp_enqueue_script( 'reactcomjs', $app_base . '/app.js', array('jquery'), null, true );
 
 			/* Barba JS */
 			wp_enqueue_script( 'barbajs', $app_base . '/lib/barba.js', array('jquery'), null, true );
