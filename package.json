@@ -1,0 +1,50 @@
+{
+  "name": "corp-full-theme",
+  "version": "4.0.0",
+  "description": "Theme for corporate sites!",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "serve": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/someconnect1/Corp-Full-Theme.git"
+  },
+  "keywords": [
+    "prodhmd",
+    "kakemultimedia",
+    "someconnect",
+    "corporate",
+    "starkers",
+    "webpack",
+    "react",
+    "clean",
+    "basic"
+  ],
+  "author": "James Burrell",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/someconnect1/Corp-Full-Theme/issues"
+  },
+  "homepage": "https://github.com/someconnect1/Corp-Full-Theme#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-env": "^1.7.0",
+    "barba.js": "^1.0.0",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  }
+}
