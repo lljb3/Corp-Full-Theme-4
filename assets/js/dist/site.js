@@ -1,5 +1,5 @@
 // Import JS
-import '../lib/swup';
+import '../lib/smoothState';
 import '../lib/bootstrap.bundle';
 import '../lib/bootstrap.jasny';
 import '../lib/modernizr';
