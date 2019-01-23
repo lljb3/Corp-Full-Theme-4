@@ -123,6 +123,31 @@ import '../../css/lib/style.min.css';
 		});
 	}
 	toTop();
+
+	// Adding Backlist Classes
+	function addBlacklistClass() {
+		$('a').each(function() {
+			if (window.location.href.indexOf('/wp-admin') !== -1 ||
+			window.location.href.indexOf('/wp-login.php') !== -1 ||
+			window.location.href.indexOf('/shop') !== -1) {
+				$(this).addClass('nosmoothstate');
+			}
+		});
+	}
+	addBlacklistClass();
+
+	// Adding Comments Section Hash
+	function addBlacklistHash() {
+		var $hash = $( window.location.hash );
+		if ($hash.length !== 0) {
+			var offsetTop = $hash.offset().top;
+			$('body, html').animate({
+					scrollTop: ( offsetTop - 60 ),
+				},{
+					duration: 280
+			});
+		}
+	}
 	
 	// Facebook API
 	function FacebookAPI() {
@@ -174,6 +199,37 @@ import '../../css/lib/style.min.css';
 		// History
 		updateURL: false,
 		popstate: true,
+	});
+
+	// SmoothState
+	$('main').smoothState({
+		blacklist: '.nosmoothstate, .fancybox',
+		onBefore: function($anchor, $container) {
+			/* Insert Event Here */
+		},
+		onStart: {
+			duration: 350,
+			render: function ($container) {
+				/* Insert Event Here */
+			}
+		},
+		onProgress: {
+			duration: 350,
+			render: function ($container) {
+				/* Insert Event Here */
+			}
+		},
+		onReady: {
+			duration: 350,
+			render: function ($container, $newContent) {
+				$container.html($newContent);
+				/* Insert Event Here */
+			}
+		},
+		onAfter: function($container, $newContent) {
+			addBlacklistClass();
+			addBlacklistHash();
+		}
 	});
 						
 })(jQuery, window, document);
