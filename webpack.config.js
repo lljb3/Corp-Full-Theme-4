@@ -50,11 +50,12 @@ module.exports = {
                 })
             },
             {
-                test: /\.scss$/i,
-                exclude: /node_modules/,
-                use: ExtractTextPlugin.extract( {
-                    use: [ 'css-loader', 'sass-loader' ]
-                } )
+                test: /\.scss$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    use: ['css-loader','sass-loader'],
+                    publicPath: 'dist'
+                })
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -102,6 +103,9 @@ module.exports = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('../css/style.min.css')
+        new ExtractTextPlugin({
+            filename: '../css/style.min.css',
+            allChunks: true,
+        })
     ]
 }
