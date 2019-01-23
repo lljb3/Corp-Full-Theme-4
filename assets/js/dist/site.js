@@ -202,7 +202,7 @@ import '../../css/lib/style.min.css';
 	});
 
 	// SmoothState
-	$('main').smoothState({
+	$('#smoothstate-container').smoothState({
 		blacklist: '.nosmoothstate, .fancybox',
 		onBefore: function($anchor, $container) {
 			/* Insert Event Here */

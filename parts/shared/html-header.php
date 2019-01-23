@@ -53,4 +53,4 @@
 <div id="app">
 
 <!-- Start Barba -->
-<div id="swup" class="transition-fade">
+<div id="smoothstate-container">
