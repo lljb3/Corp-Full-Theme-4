@@ -21,7 +21,7 @@ N/A at this time.
 
 2. Switched to Webpack and ReactJS for smaller file size calls and faster post/page loads.
 
-3. Added BarbaJS for seamless AJAX/PJAX page load.
+3. Added SmoothStateJS for seamless AJAX/PJAX page load.
 
 4. Added a theme option that turns on collapsed menus for desktop. Will open up a full screen menu once clicked.
 
