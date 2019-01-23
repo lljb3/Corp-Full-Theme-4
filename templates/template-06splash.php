@@ -26,7 +26,17 @@
 <!-- Main Information -->
 <main <?php body_class(); ?>>
 
-
+<!-- Content Information -->
+<div class="container-fluid" id="content">
+    <div class="row">
+        <div class="col-lg-12">
+			<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+                <h2 class="has-title text-center hidden"><?php the_title(); ?></h2>
+                <div class="has-text"><?php the_content(); ?></div>
+            <?php endwhile; ?>
+        <!-- end .col-lg-10 --></div>
+    <!-- end .row --></div>
+<!-- end #content --></div>
 
 <!-- end main --></main>
 
