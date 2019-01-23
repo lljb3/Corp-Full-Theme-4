@@ -105,6 +105,11 @@
 				'required'  => true,
 			),
 			array(
+				'name'      => 'Duplicate Page',
+				'slug'      => 'duplicate-page',
+				'required'  => true,
+			),
+			array(
 				'name'      => 'All-In-One WP Migration',
 				'slug'      => 'all-in-one-wp-migration',
 				'required'  => true,
