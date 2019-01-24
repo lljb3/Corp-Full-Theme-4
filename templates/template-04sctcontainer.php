@@ -134,7 +134,7 @@
 <!-- end #content --></div>
 
 <!-- Blog Section Info -->
-<?php if( $corp_theme_option['content-posts-container'] ) : ?>
+<?php if( $corp_theme_option['content-posts-section-page-container'] ) : ?>
     <section class="container-fluid section" id="blog-section">
         <div class="row" id="posts-section">
             <?php // Display blog posts on any page @ http://m0n.co/l

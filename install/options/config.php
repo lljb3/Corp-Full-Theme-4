@@ -1096,6 +1096,15 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'desc'	=> __('', 'redux-framework-demo'),
 						'default' => true
 					),
+					array(
+						'id' => 'content-posts-section-page-container',
+						'type'	=> 'switch',
+						'title'	=> __('Show Posts on Section Container Template', 'redux-framework-demo'),
+						'subtitle'	=> __('', 'redux-framework-demo'),
+						'desc'	=> __('', 'redux-framework-demo'),
+						'default' => true,
+						'required' => array('content-posts-container', 'equals', true),
+					),
 					// Blog Posts Options
 					array(
 						'id' => 'blog-posts-number-of',
