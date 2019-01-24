@@ -49,14 +49,14 @@ module.exports = {
                     ]
                 })
             },
-            {
+            /*{
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: ['css-loader','sass-loader'],
                     publicPath: 'dist'
                 })
-            },
+            },*/
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 use: [{
@@ -105,7 +105,7 @@ module.exports = {
     plugins: [
         new ExtractTextPlugin({
             filename: '../css/style.min.css',
-            allChunks: true,
+            //allChunks: true,
         })
     ]
 }

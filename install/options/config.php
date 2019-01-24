@@ -382,17 +382,15 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'   => 'color-collapsable-header-background',
-						'type' => 'background',
+						'type' => 'color_rgba',
 						'required' => array('collapsable-header-button', 'equals', true),
 						'title' => __('Collapsable Header Background Color', 'redux-framework-demo'),
 						'subtitle' => __('Change Header Background Color'),
-						'output' => array('#collapse-menu #navbar-collapse.panel-collapse'),
-						'background-repeat'	=> false,
-						'background-attachment'	=> false,
-						'background-position'	=> false,
-						'background-image'	=> false,
-						'transparent'	=> false,
-						'background-size'	=> false,
+						'output' => array('background-color' => '#collapse-menu #navbar-collapse'),
+						'default'   => array(
+							'color'     => '#242424',
+							'alpha'     => .5
+						),
 					),
 					array(
 						'id'	=> 'color-collapsable-header',
@@ -521,7 +519,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'background-attachment'	=> false,
 						'background-position'	=> false,
 						'background-image'	=> false,
-						'transparent'	=> false,
+						'transparent'	=> true,
 						'background-size'	=> false,
 					),
 					array(

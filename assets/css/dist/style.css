@@ -473,7 +473,8 @@ p {
 	margin-bottom: 25px;
     min-height: auto !important;
 }
-#collapse-menu #navbar-collapse.panel-collapse {
+#collapse-menu #navbar-collapse.panel-collapse.in,
+#collapse-menu #navbar-collapse.collapsing {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -481,9 +482,6 @@ p {
 	right: 0;
 	display: flex;
 	align-items: center;
-}
-#collapse-menu #navbar-collapse.collapse:not(.show) {
-	display: none;
 }
 #collapse-menu .navbar-toggler {
 	z-index: 10000;
