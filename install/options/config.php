@@ -364,16 +364,16 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'	=> 'collapsable-header-button',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Collapsable Header', 'redux-framework-demo'),
 						'subtitle'	=> __('Make Header on Home Page Collapsable', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default'	=> 0
+						'default'	=> false,
 					),
 					array(
 						'id'        => 'collapsable-header-logo',
 						'type'      => 'media',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title'     => __('Collapsable Logo', 'redux-framework-demo'),
 						'compiler'  => 'true',
 						'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
@@ -383,7 +383,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'   => 'color-collapsable-header-background',
 						'type' => 'background',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title' => __('Collapsable Header Background Color', 'redux-framework-demo'),
 						'subtitle' => __('Change Header Background Color'),
 						'output' => array('#collapse-menu #navbar-collapse.panel-collapse'),
@@ -397,7 +397,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-collapsable-header',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Collapsable Header Color', 'redux-framework-demo'), 
 						'subtitle'	=> __('Collapsable Header Color (default: #ffffff)', 'redux-framework-demo'),
 						'default'	=> '#ffffff',
@@ -408,7 +408,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'typography-collapsable-header',
 						'type'	=> 'typography',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Typography Collapsable Header', 'redux-framework-demo'),
 						'google'	=> true,
 						'fonts'		=> $custom_fonts,
@@ -439,7 +439,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-collapsable-header-link',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Collapsable Header Link Color', 'redux-framework-demo'),
 						'output'	=> array('#collapse-menu a,#collapse-menu a:visited,#collapse-menu a:focus,#collapse-menu .fab,#collapse-menu .fab:visited,#collapse-menu .fab:focus'),
 						'subtitle'	=> __('Collapsable Header Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -450,7 +450,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-collapsable-header-link-hover',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 0) ? true : false,
+						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Collapsable Content Hover Link Color', 'redux-framework-demo'), 
 						'output'	=> array('#collapse-menu a:hover,#collapse-menu a:active,#collapse-menu .fab:hover,#collapse-menu .fab:active'),
 						'subtitle'	=> __('Collapsable Content Hover Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -473,16 +473,16 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'	=> 'transitional-header-button',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Transitional Header', 'redux-framework-demo'),
 						'subtitle'	=> __('Make Header on Home Page Transitional', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default'	=> 1
+						'default'	=> true
 					),
 					array(
 						'id'        => 'trans-header-logo',
 						'type'      => 'media',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title'     => __('Transitional Logo', 'redux-framework-demo'),
 						'compiler'  => 'true',
 						'mode'      => false, // Can be set to false to allow any media type, or can also be set to any mime type.
@@ -492,7 +492,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'   => 'color-trans-header-border',
 						'type' => 'border',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title' => __('Trans Header Border Color', 'redux-framework-demo'),
 						'subtitle' => __('Change Trans Header Border Color'),
 						'desc'	=> __('', 'redux-framework-demo'),
@@ -513,7 +513,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'   => 'color-trans-header-background',
 						'type' => 'background',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title' => __('Trans Header Background Color', 'redux-framework-demo'),
 						'subtitle' => __('Change Header Background Color'),
 						'output' => array('#trans-menu.large'),
@@ -527,7 +527,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-trans-header',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title'	=> __('Trans Header Color', 'redux-framework-demo'), 
 						'subtitle'	=> __('Trans Header Color (default: #ffffff)', 'redux-framework-demo'),
 						'default'	=> '#ffffff',
@@ -538,7 +538,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'typography-trans-header',
 						'type'	=> 'typography',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title'	=> __('Typography Trans Header', 'redux-framework-demo'),
 						'google'	=> true,
 						'fonts'		=> $custom_fonts,
@@ -569,7 +569,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-trans-header-link',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title'	=> __('Trans Header Link Color', 'redux-framework-demo'),
 						'output'	=> array('#trans-menu.large a,#trans-menu.large a:visited,#trans-menu.large a:focus,#trans-menu.large .fab,#trans-menu.large .fab:visited,#trans-menu.large .fab:focus'),
 						'subtitle'	=> __('Trans Header Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -580,7 +580,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-trans-header-link-hover',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['transitional-header-button'] == 0) ? true : false,
+						'required' => array('transitional-header-button', 'equals', true),
 						'title'	=> __('Trans Content Hover Link Color', 'redux-framework-demo'), 
 						'output'	=> array('#trans-menu.large a:hover,#trans-menu.large a:active,#trans-menu.large .fab:hover,#trans-menu.large .fab:active'),
 						'subtitle'	=> __('Trans Content Hover Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -600,12 +600,10 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'subtitle' => __('Update the header with these options.', 'redux-framework-demo'),
 						'type' => 'section',
 						'indent' => true,
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 					),
 					array(
 						'id'   => 'color-header-border',
 						'type' => 'border',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'title' => __('Header Border', 'redux-framework-demo'),
 						'subtitle' => __('Header Border'),
 						'desc'	=> __('', 'redux-framework-demo'),
@@ -626,7 +624,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-header-background',
 						'type'	=> 'background',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'output'	=> array('#trans-menu.small, header .navbar, header .navbar .navbar-nav > ul > li ul.sub-menu, header .navbar nav > div > ul > li ul.sub-menu, #header-menu, #trans-menu .mx-auto.d-md-block.d-lg-none .navbar-collapse, header .dropdown-menu'),
 						'title'	=> __('Site Header Background Color', 'redux-framework-demo'),
 						'subtitle'	=> __('Site Header Background Color (default: #242424333)', 'redux-framework-demo'),
@@ -641,7 +638,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-header',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'title'	=> __('Site Header Color', 'redux-framework-demo'), 
 						'subtitle'	=> __('Site Header Color (default: #ffffff)', 'redux-framework-demo'),
 						'default'	=> '#ffffff',
@@ -651,7 +647,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'typography-header',
 						'type'	=> 'typography',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'title'	=> __('Typography Header', 'redux-framework-demo'),
 						'google'	=> true,
 						'fonts'		=> $custom_fonts,
@@ -682,7 +677,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-header-link',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'title'	=> __('Site Header Link Color', 'redux-framework-demo'),
 						'output'	=> array('header a,header a:visited,header a:focus,header .fab,header .fab:visited,header .fab:focus,#header-container a,#header-container a:visited,#header-container a:focus,#trans-menu.small a,#trans-menu.small a:visited,#trans-menu.small a:focus'),
 						'subtitle'	=> __('Site Header Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -693,7 +687,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-header-link-hover',
 						'type'	=> 'color',
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 						'title'	=> __('Site Content Hover Link Color', 'redux-framework-demo'), 
 						'output'	=> array('header a:hover,header a:active,#header-container a:hover,#header-container a:focus,#trans-menu.small a:hover,#trans-menu.small a:active'),
 						'subtitle'	=> __('Site Content Hover Link Color (default: #70b9a0)', 'redux-framework-demo'),
@@ -705,7 +698,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'id'     => 'section-end',
 						'type'   => 'section',
 						'indent' => false,
-						'hidden' => ($corp_options['collapsable-header-button'] == 1) ? true : false,
 					),
 					array(
 						'id'   =>'section-start',
@@ -965,11 +957,11 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'	=> 'scroll-down-line',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Scroll Down Line', 'redux-framework-demo'),
 						'subtitle'	=> __('Adds a line on the scroll down.', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default'	=> 1
+						'default'	=> false
 					),
 					array(
 						'id'	=> 'scroll-down-line-color',
@@ -980,6 +972,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+						'required' => array('scroll-down-line', 'equals', true),
 					),
 					array(
 						'id'     => 'section-end',
@@ -1097,17 +1090,17 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id' => 'content-posts-container',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Show Posts on Front Page', 'redux-framework-demo'),
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default' => 1
+						'default' => true
 					),
 					// Blog Posts Options
 					array(
 						'id' => 'blog-posts-number-of',
 						'type' => 'slider',
-						//'hidden' => ($corp_options['content-posts-container'] == 0) ? true : false,
+						'required' => array('content-posts-container', 'equals', true),
 						'title'	=> __('Number of Blog Posts', 'redux-framework-demo'),
 						'subtitle'	=> __('Set the number of blog posts to generate', 'redux-framework-demo'),
 						'desc'	=> __('Do not choose 5 or 7 unless you want to be uneven on the bottom.', 'redux-framework-demo'),
@@ -1124,6 +1117,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'title' => __('Front Page Blog Posts Category', 'redux-framework-demo'),
 						'subtitle'  => __('Write which category of blog posts that will appear on front page.', 'redux-framework-demo'),
 						'desc' => __('eg: category1, category2, ...', 'redux-framework-demo'),
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-background',
@@ -1138,6 +1132,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'background-image'	=> false,
 						'transparent'	=> false,
 						'background-size'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-header',
@@ -1148,6 +1143,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'validate'	=> 'color',
 						'output' => array('.home #content #posts-section .post-item .has-title,.page-template-template-01home #content #posts-section .post-item .has-item,.page-template-template-04sctcontainer #blog-section #posts-section .post-item .has-item'), // An array of CSS selectors to apply this font style to dynamically
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-header-hover',
@@ -1158,6 +1154,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'validate'	=> 'color',
 						'output' => array('.home #content #posts-section .post-item .has-title:hover,.page-template-template-01home #content #posts-section .post-item .has-item:hover,.page-template-template-04sctcontainer #blog-section #posts-section .post-item .has-item:hover'), // An array of CSS selectors to apply this font style to dynamically
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-read-more-bg',
@@ -1167,6 +1164,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-read-more-bg-hover',
@@ -1176,6 +1174,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-read-more-text',
@@ -1185,6 +1184,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id' => 'color-blog-posts-read-more-text-hover',
@@ -1194,6 +1194,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#f8f8f8',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+						'required' => array('content-posts-container', 'equals', true),
 					),
 					array(
 						'id'     => 'section-end',
@@ -1295,11 +1296,11 @@ if (!class_exists('Redux_Framework_sample_config')) {
 	            'fields'    => array(
 					array(
 						'id' => 'footer-sitemap',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Show Sitemap on Footer', 'redux-framework-demo'),
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default' => 1
+						'default' => false
 					),
 					array(
 						'id'	=> 'color-footer-background',
@@ -1314,6 +1315,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'background-image'	=> false,
 						'transparent'	=> false,
 						'background-size'	=> false,
+						'required' => array('footer-sitemap', 'equals', true),
 					),
 					array(
 						'id'	=> 'color-footer-bottom-background',
@@ -1408,11 +1410,11 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'	=> 'footer-show-up-button',
-						'type'	=> 'checkbox',
+						'type'	=> 'switch',
 						'title'	=> __('Display "To The Top" Button', 'redux-framework-demo'),
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'default'	=> 1
+						'default'	=> true
 					),
 					// Social Media Options
 					array(
