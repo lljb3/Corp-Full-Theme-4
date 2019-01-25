@@ -382,11 +382,46 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					),
 					array(
 						'id'   => 'color-collapsable-header-background',
-						'type' => 'color_rgba',
+						'type' => 'background',
 						'required' => array('collapsable-header-button', 'equals', true),
 						'title' => __('Collapsable Header Background Color', 'redux-framework-demo'),
 						'subtitle' => __('Change Header Background Color'),
-						'output' => array('background-color' => '#collapse-menu #navbar-collapse'),
+						'output' => array('#collapse-menu'),
+						'background-repeat'	=> false,
+						'background-attachment'	=> false,
+						'background-position'	=> false,
+						'background-image'	=> false,
+						'transparent'	=> true,
+						'background-size'	=> false,
+					),
+					array(
+						'id'   => 'color-collapsable-header-border',
+						'type' => 'border',
+						'required' => array('collapsable-header-button', 'equals', true),
+						'title' => __('Collapsable Header Border Color', 'redux-framework-demo'),
+						'subtitle' => __('Change Trans Header Border Color'),
+						'desc'	=> __('', 'redux-framework-demo'),
+						'output' => array('#collapse-menu'),
+						'default'  => array(
+							'border-color'  => '#c8c8c8', 
+							'border-style'  => 'solid', 
+							'border-bottom' => '0px', 
+						),
+						'all' => false,
+						'left' => false,
+						'right' => false,
+						'top' => false,
+						'bottom' => true,
+						'style' => true,
+						'color' => true,
+					),
+					array(
+						'id'   => 'color-collapsable-panel-background',
+						'type' => 'color_rgba',
+						'required' => array('collapsable-header-button', 'equals', true),
+						'title' => __('Collapsable Panel Background Color', 'redux-framework-demo'),
+						'subtitle' => __('Change Header Background Color'),
+						'output' => array('background-color' => '#panel-navbar-collapse'),
 						'default'   => array(
 							'color'     => '#242424',
 							'alpha'     => .5
@@ -424,7 +459,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
-						'output' => array('#collapse-menu'), // An array of CSS selectors to apply this font style to dynamically
+						'output' => array('#collapse-menu,#panel-navbar-collapse'), // An array of CSS selectors to apply this font style to dynamically
 						'units'	=> 'em', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
@@ -439,7 +474,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'type'	=> 'color',
 						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Collapsable Header Link Color', 'redux-framework-demo'),
-						'output'	=> array('#collapse-menu a,#collapse-menu a:visited,#collapse-menu a:focus,#collapse-menu .fab,#collapse-menu .fab:visited,#collapse-menu .fab:focus'),
+						'output'	=> array('#panel-navbar-collapse a,#panel-navbar-collapse a:visited,#panel-navbar-collapse a:focus'),
 						'subtitle'	=> __('Collapsable Header Link Color (default: #70b9a0)', 'redux-framework-demo'),
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
@@ -450,7 +485,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'type'	=> 'color',
 						'required' => array('collapsable-header-button', 'equals', true),
 						'title'	=> __('Collapsable Content Hover Link Color', 'redux-framework-demo'), 
-						'output'	=> array('#collapse-menu a:hover,#collapse-menu a:active,#collapse-menu .fab:hover,#collapse-menu .fab:active'),
+						'output'	=> array('#panel-navbar-collapse a:hover,#panel-navbar-collapse a:active'),
 						'subtitle'	=> __('Collapsable Content Hover Link Color (default: #70b9a0)', 'redux-framework-demo'),
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
@@ -605,7 +640,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'title' => __('Header Border', 'redux-framework-demo'),
 						'subtitle' => __('Header Border'),
 						'desc'	=> __('', 'redux-framework-demo'),
-						'output' => array('#trans-menu.small, header .navbar, header .navbar .navbar-nav > ul > li ul.sub-menu, header .navbar nav > div > ul > li ul.sub-menu, #header-menu, header .dropdown-menu'),
+						'output' => array('#trans-menu.small, #header-menu'),
 						'default'  => array(
 							'border-color'  => '#c8c8c8', 
 							'border-style'  => 'solid', 
@@ -622,7 +657,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 					array(
 						'id'	=> 'color-header-background',
 						'type'	=> 'background',
-						'output'	=> array('#trans-menu.small, header .navbar, header .navbar .navbar-nav > ul > li ul.sub-menu, header .navbar nav > div > ul > li ul.sub-menu, #header-menu, #trans-menu .mx-auto.d-md-block.d-lg-none .navbar-collapse, header .dropdown-menu'),
+						'output'	=> array('#trans-menu.small, #trans-menu .dropdown-menu, #header-menu, #header-menu .dropdown-menu, .navbar-collapse.show'),
 						'title'	=> __('Site Header Background Color', 'redux-framework-demo'),
 						'subtitle'	=> __('Site Header Background Color (default: #242424333)', 'redux-framework-demo'),
 						'default'	=> array( 'background-color' => '#242424333' ),

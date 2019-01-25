@@ -127,7 +127,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     }
     
     if (!this.$element.hasClass('in')) {
-      this.$element.css('visiblity', 'hidden !important').addClass('in')
+      this.$element.css('visiblity', 'hidden !important').addClass('in').addClass('show')
     } 
     
     var horizontal = $(window).width() / this.$element.width()
@@ -147,7 +147,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     this.placement = horizontal >= vertical ? ab('left', 'right') : ab('top', 'bottom')
       
     if (this.$element.css('visibility') === 'hidden !important') {
-      this.$element.removeClass('in').css('visiblity', '')
+      this.$element.removeClass('in').removeClass('show').css('visiblity', '')
     }
   }
   
@@ -256,7 +256,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     }
 
     setTimeout($.proxy(function() {
-      this.$element.addClass('in')
+      this.$element.addClass('in').addClass('show')
       this.slide(elements, offset, $.proxy(complete, this))
     }, this), 1)
   }
@@ -280,7 +280,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
       this.state = null
       this.placement = null
       
-      this.$element.removeClass('in')
+      this.$element.removeClass('in').removeClass('show')
       
       elements.removeClass('canvas-sliding')
       elements.add(this.$element).add('body').each(function() {
@@ -305,7 +305,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
   OffCanvas.prototype.calcClone = function() {
     this.$calcClone = this.$element.clone()
       .html('')
-      .addClass('offcanvas-clone').removeClass('in')
+      .addClass('offcanvas-clone').removeClass('in').removeClass('show')
       .appendTo($('body'))
   }
 
@@ -316,7 +316,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Jasny Bootstrap\'s JavaScr
     this.placement = null
     var elements = this.getCanvasElements()
     
-    this.$element.removeClass('in')
+    this.$element.removeClass('in').removeClass('show')
     
     elements.removeClass('canvas-slid')
     elements.add(this.$element).add('body').each(function() {
