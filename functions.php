@@ -31,7 +31,6 @@
 	======================================================================================================================== */
 
 	add_theme_support('post-thumbnails');
-	add_action( 'after_setup_theme', 'register_my_menu' );
 	function register_my_menu() {
 		register_nav_menu( 'primary', 'Home Menu' );
 		register_nav_menu( 'secondary', 'Other Menu' );
@@ -43,6 +42,7 @@
 		register_nav_menu( 'sitemap5', 'Site Map 5' );
 		register_nav_menu( 'sitemap6', 'Site Map 6' );
 	}
+	add_action( 'after_setup_theme', 'register_my_menu' );
 
 	/* ========================================================================================================================
 	
@@ -67,6 +67,7 @@
 	======================================================================================================================== */
 
 	require_once('includes/scripts.php');
+	require_once( 'includes/react.php' );
 
 	/* ========================================================================================================================
 	
