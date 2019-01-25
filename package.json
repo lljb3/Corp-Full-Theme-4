@@ -1,7 +1,7 @@
 {
   "name": "corp-full-theme",
   "version": "4.0.0",
-  "description": "Theme for corporate sites!",
+  "description": "Kake Multimedia and ProdHMD's WordPress theme for corporations and small businesses.",
   "main": "webpack.config.js",
   "scripts": {
     "test": "test",
@@ -16,7 +16,6 @@
   "keywords": [
     "prodhmd",
     "kakemultimedia",
-    "someconnect",
     "corporate",
     "starkers",
     "webpack",
