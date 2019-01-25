@@ -15,7 +15,7 @@ import '../../css/lib/bootstrap-reboot.min.css';
 import '../../css/lib/bootstrap.jasny.min.css';
 import '../../css/lib/fontawesome.all.min.css';
 import '../../css/lib/animate.min.css';
-import '../../css/lib/style.min.css';
+import '../../css/dist/style.css';
 'use strict';
 
 (function ($, window, document) {
@@ -189,7 +189,7 @@ import '../../css/lib/style.min.css';
 	// Smooth Scroll
 	var scroll = new SmoothScroll('a[href*="#"]', {
 		// Selectors
-		ignore: '[data-scroll-ignore]',
+		ignore: '[data-scroll-ignore],[data-toggle]',
 		header: '[data-scroll-header]',
 		topOnEmptyHash: true,
 		// Speed & Easing
