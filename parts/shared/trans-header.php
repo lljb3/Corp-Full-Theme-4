@@ -43,7 +43,7 @@
                         'walker'		  => new WP_Bootstrap_Navwalker()
                     )
                 ); ?>
-                <ul class="navbar-nav text-center">
+                <ul class="navbar-nav text-center" id="extra-menu">
                     <?php if( !empty( $chat ) ) { 
                         echo '<script type="text/javascript">' . $chat . '</script>';
                         echo '<li class="menu-chat menu-item nav-item"><i class="fas fa-comments-o" aria-hidden="true"></i></li>'; 
