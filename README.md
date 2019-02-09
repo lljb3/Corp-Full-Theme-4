@@ -1,7 +1,7 @@
 # Corp-Full-Theme
 Kake Multimedia's WordPress theme for corporations and small businesses.
 
-Currently on version: 4.0.0!
+Currently on version: 4.0.1!
 
 ## Before Installation
 
@@ -13,7 +13,13 @@ Please make sure to go thru every option in Theme Options in order to ensure a q
 
 ## Coming Soon To The Next Version:
 
-N/A at this time.
+Expand on AJAX loading with AJAX loader section in Theme Options.
+
+## What's new in 4.0.1?
+
+1. Added the ability to switch on and off AJAX page loading.
+
+2. Expanded the ability to change specific headings and their font sizes, as well as overall typography ability updates.
 
 ## What's new in 4.0.0?
 
