@@ -5,7 +5,7 @@ Currently on version: 4.0.1!
 
 ## Before Installation
 
-Please remember to only install Fusion Page Builder as it is compatible with Bootstrap 4.1. Bootstrap Shortcodes is not. Never install that again. There is also no need to comment any lines out anymore, as RequireJS is not included and there are no JS conflicts.
+Please remember to only install Fusion Page Builder as I took the time to make it compatible with Bootstrap 4.1. Bootstrap Shortcodes is not. Never install that again. There is also no need to comment any lines out anymore, as RequireJS is not included and there are no JS conflicts.
 
 ## After Installation
  
