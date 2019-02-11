@@ -38,7 +38,7 @@
 				'labels'                => $labels,
 				'supports'              => array( 'title', 'editor', 'thumbnail', 'trackbacks', 'revisions', 'post-formats', ),
 				'taxonomies'            => array( 'testimonial_types' ),
-				'hierarchical'          => false,
+				'hierarchical'          => true,
 				'public'                => true,
 				'show_ui'               => true,
 				'show_in_menu'          => true,
@@ -50,7 +50,7 @@
 				'has_archive'           => true,		
 				'exclude_from_search'   => false,
 				'publicly_queryable'    => true,
-				'capability_type'       => 'post',
+				'capability_type'       => 'page',
 			);
 			register_post_type( 'testimonials', $args );
 		
@@ -69,3 +69,40 @@
 		add_action('admin_head', 'namespaced_admin_styles_function');
 	
 	}
+
+// Add Shortcode
+function testimonials_shortcode( $atts ) {
+
+	// Attributes
+	$atts = shortcode_atts(
+		array(
+			'posts' => '-1',
+			'orderby' => 'date',
+			'order' => 'ASC',
+		),
+		$atts
+	);
+
+	$args = array(
+	    'post_type' => 'testimonials',
+	    'nopaging' => false,
+	    'posts_per_page' => $atts['posts'],
+	    'order' => $atts['order'],
+	    'orderby' => $atts['orderby'],
+	);
+	$query = new WP_Query( $args );
+
+	ob_start();
+	
+	if( $query->have_posts() ) : while( $query->have_posts() ) : $query->the_post();
+	
+	echo '<div class="testimonial-post">';
+	    echo the_content();
+	echo '</div>';
+	
+	endwhile; wp_reset_postdata(); endif;
+
+	return ob_get_clean();
+
+}
+add_shortcode( 'testimonial-posts', 'testimonials_shortcode' );
