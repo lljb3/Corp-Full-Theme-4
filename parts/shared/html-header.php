@@ -52,5 +52,7 @@
 <!-- Start App -->
 <div id="app">
 
-<!-- Start Barba -->
-<div id="smoothstate-container">
+<?php if( $corp_theme_option['pjax-loader'] ) : ?>
+	<!-- Start SmoothStateJS -->
+	<div id="smoothstate-container">
+<?php endif; ?>

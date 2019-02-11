@@ -9,8 +9,10 @@
 <!-- Custom JavaScript -->
 <?php echo $custom_scripts; ?>
 
-<!-- End Barba -->
-</div>
+<?php if( $corp_theme_option['pjax-loader'] ) : ?>
+	<!-- End SmoothStateJS -->
+	</div>
+<?php endif; ?>
 
 <!-- End App -->
 </div>

@@ -448,7 +448,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('#trans-menu.large'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -590,7 +590,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('#collapse-menu,#panel-navbar-collapse'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -698,7 +698,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('#header-menu,#trans-menu.small'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -841,7 +841,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('.jumbotron h1,.jumbotron h2,.jumbotron h3,.jumbotron h4,.jumbotron h5,.jumbotron h6'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -871,7 +871,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -1023,6 +1023,14 @@ if (!class_exists('Redux_Framework_sample_config')) {
 	            'desc'      => __('This section is to set the overall typography for the body (not including the header and footer.', 'redux-framework-demo'),
 	            'icon'      => 'el el-fontsize',
 	            'fields'    => array(
+					// Link Options
+					array(
+						'id'   =>'section-start',
+						'title' => __('Link Options', 'redux-framework-demo'),
+						'subtitle' => __('Update the content a tags and other links with these options.', 'redux-framework-demo'),
+						'type' => 'section',
+						'indent' => true,
+					),
 					array(
 						'id'	=> 'color-content-link',
 						'type'	=> 'color',
@@ -1042,6 +1050,19 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+					),
+					array(
+						'id'     => 'section-end',
+						'type'   => 'section',
+						'indent' => false,
+					),
+					// Headings Options
+					array(
+						'id'   =>'section-start',
+						'title' => __('Link Options', 'redux-framework-demo'),
+						'subtitle' => __('Update the content a tags and other links with these options.', 'redux-framework-demo'),
+						'type' => 'section',
+						'indent' => true,
 					),
 					array(
 						'id'	=> 'typography-headings',
@@ -1064,7 +1085,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('h1,h2,h3,h4,h5,h6'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -1072,6 +1093,193 @@ if (!class_exists('Redux_Framework_sample_config')) {
 							'google'	=> true,
 							'color'	=> '#242424'
 						),
+					),
+					array(
+						'id'	=> 'typography-headings-h1',
+						'type'	=> 'typography',
+						'title'	=> __('H1', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h1,#content h1'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H1 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'	=> 'typography-headings-h2',
+						'type'	=> 'typography',
+						'title'	=> __('H2', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h2,#content h2'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H2 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'	=> 'typography-headings-h3',
+						'type'	=> 'typography',
+						'title'	=> __('H3', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h3,#content h3'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H3 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'	=> 'typography-headings-h4',
+						'type'	=> 'typography',
+						'title'	=> __('H4', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h4,#content h4'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H4 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'	=> 'typography-headings-h5',
+						'type'	=> 'typography',
+						'title'	=> __('H5', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h5,#content h5'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H5 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'	=> 'typography-headings-h6',
+						'type'	=> 'typography',
+						'title'	=> __('H6', 'redux-framework-demo'),
+						'google'	=> false,
+						'font-family'	=> false,
+						'font-backup'   => false,
+						'font-style'    => false,
+						'font-weight'	=> false,
+						'text-align'	=> false,
+						'text-transform' => true,
+						'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'     => true,
+						'line-height'   => true,
+						'word-spacing'  => true, // Defaults to false
+						'letter-spacing'=> true, // Defaults to false
+						'color'	=> true,
+						'preview'	=> false, // Disable the previewer
+						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('h6,#content h6'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('Overrides the main headings for H6 tags. Try not to get color crazy. Use a color wheel and know color complement theory.', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> '',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#242424'
+						),
+					),
+					array(
+						'id'     => 'section-end',
+						'type'   => 'section',
+						'indent' => false,
+					),
+					// Body Options
+					array(
+						'id'   =>'section-start',
+						'title' => __('Body Options', 'redux-framework-demo'),
+						'subtitle' => __('Update the content p tags and other links with these options.', 'redux-framework-demo'),
+						'type' => 'section',
+						'indent' => true,
 					),
 					array(
 						'id'	=> 'typography-body',
@@ -1093,8 +1301,8 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
-						'output' => array('body'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'output' => array('body,p'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family'	=> 'Roboto',
@@ -1102,6 +1310,11 @@ if (!class_exists('Redux_Framework_sample_config')) {
 							'google'	=> true,
 							'color'	=> '#242424'
 						),
+					),
+					array(
+						'id'     => 'section-end',
+						'type'   => 'section',
+						'indent' => false,
 					),
 				)
             );  
@@ -1114,6 +1327,27 @@ if (!class_exists('Redux_Framework_sample_config')) {
 	            'desc' => __('This is to cover the typography that consist of the buttons and map icons on the body.', 'redux-framework-demo'),
 	            'icon' => 'el el-book',
 	            'fields' => array(
+					array(
+						'id'   =>'section-start',
+						'title' => __('AJAX Options', 'redux-framework-demo'),
+						'subtitle' => __('Update asynchronous loading with these options.', 'redux-framework-demo'),
+						'type' => 'section',
+						'indent' => true,
+					),
+					array(
+						'id' => 'pjax-loader',
+						'type'	=> 'switch',
+						'title'	=> __('SmoothStateJS Instant Loader', 'redux-framework-demo'),
+						'subtitle'	=> __('Turns on SmoothStateJS for a PJAX/AJAX styled fast page by page load. Be warned in using this in conjuction with WooCommerce Cart and Checkout pages.', 'redux-framework-demo'),
+						'desc'	=> __('', 'redux-framework-demo'),
+						'default' => false
+					),
+					array(
+						'id'     => 'section-end',
+						'type'   => 'section',
+						'indent' => false,
+					),
+					// Blog Posts Options
 					array(
 						'id'   =>'section-start',
 						'title' => __('Blog Post Options', 'redux-framework-demo'),
@@ -1138,7 +1372,6 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default' => true,
 						'required' => array('content-posts-container', 'equals', true),
 					),
-					// Blog Posts Options
 					array(
 						'id' => 'blog-posts-number-of',
 						'type' => 'slider',
@@ -1394,7 +1627,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('#footer-container,#footer-sitemap'), // An array of CSS selectors to apply this font style to dynamically
-						'units'	=> 'em', // Defaults to px
+						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
 							'font-family' => 'Roboto',
