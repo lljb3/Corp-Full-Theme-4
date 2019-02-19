@@ -61,7 +61,9 @@
                         <div class="thumbnail col-lg-3 col-sm-3"><?php the_post_thumbnail('large',['class'=>'img-responsive mx-auto']); ?></div>
                         <div class="post-inner col-lg-9 col-sm-9">
                             <h2 class="post-title"><a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-                            <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+                            <div class="date-time">
+                                <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+                            <!-- end .date-time --></div>
                             <?php the_content('Continue Reading'); ?>
                         </div>
                     <!-- end .post --></article>

@@ -40,7 +40,9 @@
         <div class="col-lg-6 offset-lg-1" id="posts-section">
             <article class="post">
                 <h1 class="post-title"><?php the_title(); ?></h1>
-                <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+                <div class="date-time">
+                    <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?>
+                <!-- end .date-time --></div>
                 <div class="has-post-thumbnail"><?php the_post_thumbnail('large',['class'=>'img-fluid mx-auto']); ?></div>
                 <div class="has-text">
                     <?php the_content(); ?>			
