@@ -15,7 +15,11 @@ Please make sure to go thru every option in Theme Options in order to ensure a q
 
 ## Coming Soon To The Next Version:
 
-Expand on AJAX loading with AJAX loader section in Theme Options.
+1. Expand on ReactJS & replace template files from PHP format with JSX or JS formats.
+
+2. Expand on further theme options, such as different Header layouts to select and dynamically load.
+
+3. Expand on page loaders when AJAX is activated and refine AJAX functionality in general.
 
 ## What's new in 4.0.2?
 
