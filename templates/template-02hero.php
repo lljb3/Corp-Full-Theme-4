@@ -42,8 +42,8 @@
 <!-- Jumbotron Information -->
 <div class="jumbotron" id="other">
     <div class="slider-text container-fluid">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
+        <div class="row" id="slider-text-inner">
+            <div class="col-lg-10 offset-lg-1" id="slider-text-content">
                 <?php 
                     $slidertitle = get_post_meta($post->ID, "slidermeta-text", true); 
                     $sliderimage = get_post_meta($post->ID, "slidermeta-image", true); 

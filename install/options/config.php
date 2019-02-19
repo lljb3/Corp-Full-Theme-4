@@ -827,7 +827,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'google'	=> true,
 						'fonts'		=> $custom_fonts,
 						'ext-font-css' => $theme_url . '/style.css',
-						'font-backup'	=> false,
+						'font-backup'	=> true,
 						'font-style'	=> true,
 						'font-weight'	=> true,
 						'text-align'	=> true,
@@ -839,7 +839,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'letter-spacing' => true, // Defaults to false
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
-						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('.jumbotron h1,.jumbotron h2,.jumbotron h3,.jumbotron h4,.jumbotron h5,.jumbotron h6'), // An array of CSS selectors to apply this font style to dynamically
 						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
@@ -858,7 +858,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'google'	=> true,
 						'fonts'		=> $custom_fonts,
 						'ext-font-css' => $theme_url . '/style.css',
-						'font-backup'	=> false,
+						'font-backup'	=> true,
 						'font-style'	=> true,
 						'font-weight'	=> true,
 						'text-align'	=> true,
@@ -867,10 +867,10 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'font-size'	=> true,
 						'line-height'	=> true,
 						'word-spacing'	=> true, // Defaults to false
-						'letter-spacing' => true, // Defaults to false
+						'letter-spacing'	=> true, // Defaults to false
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
-						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(
@@ -899,6 +899,36 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'default'	=> '#70b9a0',
 						'validate'	=> 'color',
 						'transparent'	=> false,
+					),
+					array(
+						'id'	=> 'jumbotron-button-text',
+						'type'	=> 'typography',
+						'title'	=> __('Jumbotron Button Text', 'redux-framework-demo'),
+						'google'	=> true,
+						'fonts'		=> $custom_fonts,
+						'ext-font-css' => $theme_url . '/style.css',
+						'font-backup'	=> true,
+						'font-style'	=> true,
+						'font-weight'	=> true,
+						'text-align'	=> true,
+						'text-transform' => true,
+						//'subsets'	=> false, // Only appears if google is true and subsets not set to false
+						'font-size'	=> true,
+						'line-height'	=> true,
+						'word-spacing'	=> true, // Defaults to false
+						'letter-spacing'	=> true, // Defaults to false
+						'color'	=> true,
+						//'preview'	=> false, // Disable the previewer
+						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
+						'output' => array('.jumbotron .slider-text .btn'), // An array of CSS selectors to apply this font style to dynamically
+						'units'	=> 'px', // Defaults to px
+						'subtitle'	=> __('', 'redux-framework-demo'),
+						'default'	=> array(
+							'font-family'	=> 'Roboto',
+							'font-style'	=> '400',
+							'google'	=> true,
+							'color'	=> '#70b9a0'
+						),
 					),
 					array(
 						'id' => 'jumbotron-button-padding',
@@ -1619,13 +1649,13 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'text-align'	=> false,
 						'text-transform' => true,
 						//'subsets'	=> false, // Only appears if google is true and subsets not set to false
-						'font-size'	=> false,
-						'line-height' => false,
+						'font-size'	=> true,
+						'line-height' => true,
 						'word-spacing' => true, // Defaults to false
 						'letter-spacing' => true, // Defaults to false
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
-						'all_styles' => false, // Enable all Google Font style/weight variations to be added to the page
+						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
 						'output' => array('#footer-container,#footer-sitemap'), // An array of CSS selectors to apply this font style to dynamically
 						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
