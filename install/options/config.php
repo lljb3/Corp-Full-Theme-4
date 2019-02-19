@@ -999,7 +999,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'validate' => 'css',
 						'title' => __('Scroll Down Icon', 'redux-framework-demo'),
 						'subtitle'  => __('A icon version of a scroll down button. Will be overridden by the image version.', 'redux-framework-demo'),
-						'desc' => __('eg: fa fa-hand-o-down', 'redux-framework-demo'),
+						'desc' => __('eg: far fa-hand-point-down', 'redux-framework-demo'),
 					),
 					array(
 						'id' => 'scroll-down-text',
@@ -1331,7 +1331,7 @@ if (!class_exists('Redux_Framework_sample_config')) {
 						'color'	=> true,
 						//'preview'	=> false, // Disable the previewer
 						'all_styles' => true, // Enable all Google Font style/weight variations to be added to the page
-						'output' => array('body,p'), // An array of CSS selectors to apply this font style to dynamically
+						'output' => array('body,p,.home #content #posts-section .post-item, .page-template-template-01home #content #posts-section .post-item, .page-template-template-04sctcontainer #blog-section #posts-section .post-item, .blog #content #posts-section .thumbnail'), // An array of CSS selectors to apply this font style to dynamically
 						'units'	=> 'px', // Defaults to px
 						'subtitle'	=> __('', 'redux-framework-demo'),
 						'default'	=> array(

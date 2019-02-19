@@ -73,19 +73,19 @@
                 ?>
                     <a href="<?php echo $sliderlink; ?>" class="btn btn-lg button-success"><?php echo $sliderbutton; ?></a>
                 <?php } ?>
-                <div class="down-arrow">
-                    <?php $scrdwnimg = $corp_theme_option['scroll-down-icon-image']['url']; $scrdwnicon = $corp_theme_option['scroll-down-icon-html']; $scrdwntxt = $corp_theme_option['scroll-down-text']; $scrdwnline = $corp_theme_option['scroll-down-line']; ?>
-                    <?php if( !empty( $scrdwnimg ) && empty( $scrdwnicon ) ) { ?>
-                        <a href="#content" data-scroll><img src="<?php echo $scrdwnimg ?>" alt="" /></a><br />
-                    <?php } elseif( !empty( $scrdwnicon ) ) { ?>
-                        <a href="#content" data-scroll><i class="<?php echo $scrdwnicon ?>"></i></a>
-                    <?php } if( !empty( $scrdwntxt ) ) { ?>
-                        <a href="#content" class="scroll-text" data-scroll><span><?php echo $scrdwntxt; ?></span></a><br />
-                    <?php } if( ( $scrdwnline ) ) { ?>
-                        <span class="line"></span>
-                    <?php } ?>
-                <!-- end .down-arrow --></div>
             <!-- end .col-lg-10 --></div>
+            <div class="down-arrow">
+                <?php $scrdwnimg = $corp_theme_option['scroll-down-icon-image']['url']; $scrdwnicon = $corp_theme_option['scroll-down-icon-html']; $scrdwntxt = $corp_theme_option['scroll-down-text']; $scrdwnline = $corp_theme_option['scroll-down-line']; ?>
+                <?php if( !empty( $scrdwnimg ) && empty( $scrdwnicon ) ) { ?>
+                    <a href="#content" data-scroll><img src="<?php echo $scrdwnimg ?>" alt="" /></a><br />
+                <?php } elseif( !empty( $scrdwnicon ) ) { ?>
+                    <a href="#content" data-scroll><i class="<?php echo $scrdwnicon ?>"></i></a>
+                <?php } if( !empty( $scrdwntxt ) ) { ?>
+                    <a href="#content" class="scroll-text" data-scroll><span><?php echo $scrdwntxt; ?></span></a><br />
+                <?php } if( ( $scrdwnline ) ) { ?>
+                    <span class="line"></span>
+                <?php } ?>
+            <!-- end .down-arrow --></div>
         <!-- end .row --></div>
     <!-- end .slider-text --></div>
     <?php $jumboimg = wp_get_attachment_url( get_post_thumbnail_id() ); ?>
