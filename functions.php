@@ -58,10 +58,6 @@
 	
 	======================================================================================================================== */
 
-	// Fusion Page Builder - Bootstrap 4
-	require_once( 'includes/fusion/fusion-core/fusion-core.php' );
-	require_once( 'includes/fusion/fusion-extension-image/fusion-extension-image.php' );
-
 	// Testimonials
 	require_once( 'includes/testimonials.php' );
 

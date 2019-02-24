@@ -7,7 +7,10 @@ module.exports = {
     mode: 'development',
     resolve: {
         alias: {
-            smoothscroll: path.resolve(__dirname, 'assets/js/lib/smooth-scroll.polyfills.js')
+            flowtypejs: path.resolve(__dirname, 'assets/js/lib/flowtype.js'),
+            smoothscrolljs: path.resolve(__dirname, 'assets/js/lib/smooth-scroll.polyfills.js'),
+            smoothstatejs: path.resolve(__dirname, 'assets/js/lib/smoothstate.js'),
+            sitejs: path.resolve(__dirname, 'assets/js/lib/site.js'),
         }
     },
     entry: {
@@ -33,16 +36,6 @@ module.exports = {
                 },
             }),
         ],
-        splitChunks: {
-            cacheGroups: {
-                styles: {
-                    name: '../css/style.min',
-                    test: /\.css$/,
-                    chunks: 'all',
-                    enforce: true
-                },
-            },
-        },
     },
     module: {
         rules: [
@@ -52,7 +45,7 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['env'],
+                        presets: ['babel-preset-env'],
                     }
                 }
             },

@@ -18,11 +18,9 @@
 			/* React Component JS */
 			wp_enqueue_script( 'reactcomjs', $app_base . '/app.js', array('jquery'), null, true );
 
-			/* Smooth Scroll JS */
-			wp_enqueue_script( 'smoothscrolljs', $app_base . '/lib/smooth-scroll.polyfills.js', array('jquery'), null, true );
-
 			/* Theme JS */
-			wp_enqueue_script( 'bundlejs',  $app_base . '/bundle.min.js', '', null, true );
+			wp_enqueue_script( 'smoothscrolljs',  $app_base . '/lib/smooth-scroll.polyfills.js', array('jquery'), null, true );
+			wp_enqueue_script( 'bundlejs',  $app_base . '/bundle.min.js', array('jquery'), null, true );
 			
 			/* Theme CSS */
 			wp_register_style( 'screen', get_stylesheet_directory_uri().'/style.css', '', '', 'screen' );
