@@ -1,7 +1,7 @@
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -23,6 +23,8 @@ module.exports = {
     optimization: {
         minimizer: [
             new UglifyJsPlugin({
+                cache: true,
+                parallel: true,
                 extractComments: true,
                 uglifyOptions: {
                     output: {
@@ -31,6 +33,16 @@ module.exports = {
                 },
             }),
         ],
+        splitChunks: {
+            cacheGroups: {
+                styles: {
+                    name: '../css/style.min',
+                    test: /\.css$/,
+                    chunks: 'all',
+                    enforce: true
+                },
+            },
+        },
     },
     module: {
         rules: [
@@ -46,20 +58,19 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        { loader: 'css-loader' }
-                    ]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                ],
             },
             {
                 test: /\.scss$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: ['css-loader','sass-loader'],
-                    publicPath: 'dist'
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader",
+                    "sass-loader"
+                ],
             },
             {
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
@@ -68,13 +79,16 @@ module.exports = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: '../fonts'
-                    }
-                }]
-            }
-        ]
+                    },
+                }],
+            },
+        ],
     },
     plugins: [
-        new ExtractTextPlugin('../css/style.min.css'),
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+            chunkFilename: "[id].css"
+        }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.optimize\.css$/g,
             cssProcessor: require('cssnano'),
@@ -82,6 +96,6 @@ module.exports = {
                 preset: ['default', { discardComments: { removeAll: true } }],
             },
             canPrint: true
-        })
-    ]
+        }),
+    ],
 }
