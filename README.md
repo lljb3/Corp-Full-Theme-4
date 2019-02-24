@@ -21,8 +21,6 @@ Please make sure to go thru every option in Theme Options in order to ensure a q
 
 3. Expand on page loaders when AJAX is activated and refine AJAX functionality in general.
 
-4. Integrate a proprietary Bootstrap 4 version of Fusion Page Builder directly into theme includes. This requires updating the fusion-core.php, fusion-bootstrap.css, fusion-core.css, fusion-core-admin.css, fusion-core-admin.js, and replacing the Bootstrap 3 admin scripts with Bootstrap 4. The extensions will also be added to the theme. The theme size might expand since it's including extra plugins in the core theme.
-
 ## What's new in 4.0.2?
 
 1. Updated some minor CSS and JavaScript changes to templates.
