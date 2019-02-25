@@ -4,10 +4,10 @@
   "description": "Kake Multimedia and ProdHMD's WordPress theme for corporations and small businesses.",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "test",
+    "test": "test", 
     "build": "webpack",
     "watch": "webpack --watch",
-    "serve": "webpack-dev-server --open"
+    "serve": "webpack-dev-server --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -53,6 +53,7 @@
     "npm": "^6.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "path": "^0.12.7",
+    "popper.js": "^1.14.7",
     "postcss-loader": "^3.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.7.0",
@@ -63,7 +64,9 @@
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^0.6.2",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0",
+    "webpack-merge": "^4.2.1"
   }
 }

@@ -1,3 +1,8 @@
+// Check For Development or Production Mode
+if (process.env.NODE_ENV !== 'production') {
+    console.log('We are in development mode.');
+}
+
 // Import JS
 import '../lib/smoothState';
 import '../lib/bootstrap.bundle';

@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     resolve: {
         alias: {
             flowtypejs: path.resolve(__dirname, 'assets/js/lib/flowtype.js'),
@@ -79,7 +79,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "../css/style.min.css",
             chunkFilename: "[id].css"
         }),
         new OptimizeCssAssetsPlugin({
