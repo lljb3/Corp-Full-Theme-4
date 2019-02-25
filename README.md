@@ -21,6 +21,12 @@ Please make sure to go thru every option in Theme Options in order to ensure a q
 
 3. Expand on page loaders when AJAX is activated and refine AJAX functionality in general.
 
+## What's new in 4.0.3?
+
+1. Updated overall theme CSS and JavaScript, including Fusion Page Builder overrides.
+
+2. Compiled production mode CSS and JavaScript.
+
 ## What's new in 4.0.2?
 
 1. Updated some minor CSS and JavaScript changes to templates.
