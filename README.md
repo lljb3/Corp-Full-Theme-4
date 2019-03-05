@@ -1,7 +1,7 @@
 # Corp-Full-Theme
 Kake Multimedia's WordPress theme for corporations and small businesses.
 
-Currently on version: 4.0.2!
+Currently on version: 4.0.3!
 
 ## Before Installation
 
